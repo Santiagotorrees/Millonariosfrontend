@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-historia',
   imports: [RouterModule],
   templateUrl: './historia.html',
-  styleUrl: './historia.css',
+  styleUrls: ['./historia.css'],
 })
 export class Historia {
 
