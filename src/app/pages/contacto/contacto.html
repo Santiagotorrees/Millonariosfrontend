@@ -1,10 +1,49 @@
-<main class="content">
-    <section class="texto-contacto">
-         <h1>Contacto</h1>
-  <p>Si tienes alguna pregunta o deseas ponerte en contacto con nosotros, por favor envíanos un correo electrónico a <a href="mailto:">
-    </a>
-</p>
-    </section>
-</main>
+<div class="container mt-4">
+    <h2>Contacto</h2>
+  
+    <!-- Alerta de éxito -->
+    <div id="successAlert" class="alert alert-success d-none">
+      ¡Formulario enviado exitosamente!
+    </div>
+  
+    <form class="needs-validation" novalidate>
+  
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" 
+               placeholder="Tu nombre"
+               pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$"
+               required>
+        <div class="invalid-feedback">
+          Solo se permiten letras.
+        </div>
+      </div>
+  
+      <!-- Teléfono -->
+      <div class="mb-3">
+        <label class="form-label">Teléfono</label>
+        <input type="text" id="telefono" class="form-control"
+               minlength="10" maxlength="10"
+               required>
+        <div class="invalid-feedback">
+          El teléfono debe tener exactamente 10 números y no puede contener texto.
+        </div>
+      </div>
+  
+      <!-- Correo -->
+      <div class="mb-3">
+        <label class="form-label">Correo</label>
+        <input type="email" class="form-control"
+               required pattern=".+@.+">
+        <div class="invalid-feedback">
+          Debe ser un correo válido y contener "@".
+        </div>
+      </div>
+  
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </div>
+  
     
  
