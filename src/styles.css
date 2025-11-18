@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+/* ==== CONFIGURACIÓN GENERAL ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  color: #fff;
+   font-size: 20px;
+  background: linear-gradient(135deg, #001a4d 0%, #0038A8 50%, #0f1623 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* ==== HEADER (Navbar moderna) ==== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 56, 168, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  padding: 10px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Centrar el título */
+header h1 {
+  margin: 0;
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Subtítulo debajo del título */
+.subtitle {
+  text-align: center;
+  color: #ffd700;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* ==== MENÚ ==== */
+.menu {
+  position: absolute;
+  right: 0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.menu a:hover {
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .menu {
+    position: static;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ==== HERO ==== */
+.hero {
+  margin-top: 120px;
+  height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://imagenes.noticiasrcn.com/ImgDeportesRCN/millonarios_fc_9.webp?w=960");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 2000px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.hero-text p {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ==== CARDS ==== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: -60px auto 60px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px;
+  transition: 0.3s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: rgba(0, 56, 168, 0.85);;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgb(255, 255, 255); /* Sombra azul intensa */
+  border-color: rgb(255, 255, 255); /* Borde azul al pasar */
+  color: #0048ff; /* Texto azul */
+}
+
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #001a4d;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ==== ANIMACIONES ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
